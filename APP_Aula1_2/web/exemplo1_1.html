@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Refresh Page</title>
+    <meta name="Author" content="Hoff Silva">
+    <meta name="Description" content="Pagina de teste da tag refresh">
+    <meta name="Keywords" content="Palavras chave">
+    <meta http-equiv="refresh" content="9; URL=http://www.uniceub.br">
+
+    <script>
+        var count=10;
+        var counter=setInterval(timer, 1000); //1000 will run it every 1 second
+        function timer()
+        {
+            count=count-1;
+            if (count <= 0)
+            {
+                clearInterval(counter);
+                return;
+            }
+            document.getElementById("timer").innerHTML=count;
+        }
+    </script>
+</head>
+<body>
+<center>
+    Esta página será redirecionada para www.uniceub.br em <span id="timer"></span> segundos.
+</center>
+
+</body>
+</html>
